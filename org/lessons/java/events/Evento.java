@@ -19,21 +19,21 @@ public class Evento {
         this.numeroPostiPrenotati = 0;
     }
 
-                                                                    //ECCEZIONE PER DATA GIA' PASSATA
+     //ECCEZIONE PER DATA GIA' PASSATA
      private void dataNonPassata(LocalDate data) {
         if(data.isBefore(LocalDate.now())) {
         throw new IllegalArgumentException("Errore: La data dell'evento (" + data + ") risulta già essere passata.");
         }
     }
 
-                                                            // ECCEZIONE PER NUMERO POSTI ESCLUSIVAMENTE POSITIVO
+     // ECCEZIONE PER NUMERO POSTI ESCLUSIVAMENTE POSITIVO
     private void postiTotaliSoloPositivo(int numeroPostiTotali) {
         if (numeroPostiTotali <= 0){
         throw new IllegalArgumentException("Errore: Il numero dei posti totali (" + numeroPostiTotali + ") deve essere positivo.");
         }
     }
 
-                                                                            //GETTER & SETTER
+    //GETTER & SETTER
 
     public String getTitolo() {
         return this.titolo;
@@ -55,19 +55,12 @@ public class Evento {
         return this.numeroPostiTotali;
     }
 
-    private void setNumeroPostiTotali(int numeroPostiTotali) {
-        this.numeroPostiTotali = numeroPostiTotali;
-    }
-
     public int getNumeroPostiPrenotati() {
         return this.numeroPostiPrenotati;
     }
 
-    private void setNumeroPostiPrenotati(int numeroPostiPrenotati) {
-        this.numeroPostiPrenotati = numeroPostiPrenotati;
-    }
 
-                                                                        //PRENOTAZIONI E DISDETTE CON CONTROLLI
+    //PRENOTAZIONI E DISDETTE CON CONTROLLI
     public String prenota() {
         if (this.data.isBefore(LocalDate.now())) {
             return "Avviso: Impossibile prenotare. L'evento '" + this.titolo + "' è già passato.";

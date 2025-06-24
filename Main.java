@@ -10,7 +10,7 @@ public class Main {
          Evento eventoUtente = null;
          boolean eventoCreato = false;
 
-                                                         //CREAZIONE EVENTO DA PARTE DELL'UTENTE CON RELATIVE ECCEZIONI 
+    //CREAZIONE EVENTO DA PARTE DELL'UTENTE CON RELATIVE ECCEZIONI 
 
         while (!eventoCreato) {
             try {
@@ -46,7 +46,7 @@ public class Main {
             System.out.println();
         }
 
-                                                                     // STEP 2 - PRENOTAZIONI
+    // STEP 2 - PRENOTAZIONI
 
         if (eventoUtente != null){
             System.out.println("Gestione prenotazioni:");
@@ -75,7 +75,7 @@ public class Main {
         System.out.println("\nStato attuale dell'evento:");
         System.out.println("Posti prenotati: " + eventoUtente.getNumeroPostiPrenotati() + ", Posti disponibili: " + (eventoUtente.getNumeroPostiTotali() - eventoUtente.getNumeroPostiPrenotati()));
 
-                                                                            //DISDETTE
+    //DISDETTE
         
         System.out.println("Gestione Disdette:");
         System.out.print("Quante prenotazioni vuoi disdire? ");
@@ -101,8 +101,8 @@ public class Main {
         System.out.println("\nPosti prenotati: " + eventoUtente.getNumeroPostiPrenotati() + ". Posti disponibili: " + (eventoUtente.getNumeroPostiTotali() - eventoUtente.getNumeroPostiPrenotati()));
         }
           
-                                                                    // STEP 3 - CLASSE CONCERTO
-            /* 
+    // STEP 3 - CLASSE CONCERTO
+        /* 
             Concerto concertoFineAnno = new Concerto("Concerto di Fine anno", LocalDate.of(2025, 12, 31), 200, LocalTime.of(20, 30), 30.00);
             System.out.println("\nConcerto creato: " + concertoFineAnno); 
             System.out.println("Data formattata: " + concertoFineAnno.getDataOraFormattata());
@@ -114,8 +114,8 @@ public class Main {
             System.out.println("Posti prenotati per concerto: " + concertoFineAnno.getNumeroPostiPrenotati());
             System.out.println(concertoFineAnno.disdici());
             System.out.println("Posti prenotati per concerto: " + concertoFineAnno.getNumeroPostiPrenotati());
-            */
-
+            
+        */  
 
         scanner.close();
         

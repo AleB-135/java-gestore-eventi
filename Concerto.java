@@ -29,14 +29,14 @@ public class Concerto extends Evento {
         this.prezzo = prezzo;
     }
 
-                                                                        // DATA E ORA FORMATTATE
+    // DATA E ORA FORMATTATE
     public String getDataOraFormattata() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy hh:mm");
         return getData().atTime(ora).format(formatter);
     }
-                                                                            //PREZZO FORMATTATO
+    //PREZZO FORMATTATO
     public String getPrezzoFormattato() {
-        return String.format("%.2f€", prezzo);
+        return String.format("%.2f$", prezzo);
     }
 
     @Override
